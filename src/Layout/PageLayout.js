@@ -1,0 +1,25 @@
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+
+import Header from '../Components/Common/Header';
+// import Footer from '../components/Footer';
+import Overview from '../Components/Overview';
+
+const PageLayout = props => {
+  return (
+    <div className="App">
+      <main className="contentContainer">
+        <Header />
+        <div className="container-fluid">
+          <div className="row">
+            <Switch>
+              <Route exact path="/" component={Overview} />
+            </Switch>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default PageLayout;
