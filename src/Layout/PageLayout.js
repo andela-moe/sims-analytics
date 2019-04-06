@@ -13,7 +13,8 @@ const PageLayout = props => {
         <div className="container-fluid">
           <div className="row">
             <Switch>
-              <Route exact path="/" component={Overview} />
+              <Route exact path="/users-skills/:token" component={Overview} />
+              <Route exact path="/kanban/:token" component={Overview} />
             </Switch>
           </div>
         </div>

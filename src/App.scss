@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Dosis:300');
 @import './styles/sidebar.scss';
 @import './styles/radar.scss';
 
+$andela-blue: #0459e4;
+
 body {
+  font-family: 'Dosis', sans-serif;
   font-size: .8rem !important;
+  background-color: #f4f8f9 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Abel', sans-serif;
+  color: $andela-blue;
 }
 
 .feather {
@@ -11,3 +21,12 @@ body {
   vertical-align: text-bottom;
 }
 
+.navbar-bg {
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.1);
+  background-color: #ffffff;
+}
+
+.card {
+  border: 0px solid rgba(0,0,0,.125) !important;
+}
