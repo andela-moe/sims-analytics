@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Header from '../Components/Common/Header';
-// import Footer from '../components/Footer';
 import Overview from '../Components/Overview';
+import UserNodes from '../Components/UserNodes';
 
 const PageLayout = props => {
   return (

@@ -7,7 +7,6 @@ import PieChartCard from './PieChartCard';
 
 class ChartParser extends Component {
   radarDisplay(records) {
-    console.log(records)
     const recordItems = records.map(record => {
       return (<div key={record.email} className="col-md-6">
         <RadarCard record={record}>{ record.name }</RadarCard>
