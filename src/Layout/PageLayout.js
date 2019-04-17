@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Header from '../Components/Common/Header';
-// import Footer from '../components/Footer';
 import Overview from '../Components/Overview';
 
 const PageLayout = props => {
@@ -15,6 +14,7 @@ const PageLayout = props => {
             <Switch>
               <Route exact path="/users-skills/:token" component={Overview} />
               <Route exact path="/kanban/:token" component={Overview} />
+              <Route exact path="/collaboration/:token" component={Overview} />
             </Switch>
           </div>
         </div>

@@ -19,11 +19,12 @@ class Overview extends Component {
   async componentDidMount() {
     
     const { token } = this.props.match.params;
-    const baseUrl = `https://andela-teams-slack.herokuapp.com/api/analytics/pt/`;
+    const baseUrl = `https://andela-teams-bot.herokuapp.com/api/analytics/pt/`;
 
     try {
       const getAnalytics = await fetch(`${baseUrl}${token}`);
       const analytics = await getAnalytics.json();
+
       this.setState({ 
         records: analytics.records,
         reportType: this.props.match.path.split('/')[1],
@@ -38,14 +39,14 @@ class Overview extends Component {
   }
 
   render() {
-    const { records } = this.state;
+    const { records, reportType } = this.state;
     const recordDisplay = records ? this.renderRecords(records) : <div className="">No records</div>
 
     return (
       <main role="main" className="col-md-12 col-lg-12 pt-3">
         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
           <div className="container">
-            <h2 className="h2">The name of the display</h2>
+            <h2 className="h2 titleHeader">{ reportType }</h2>
           </div>
         </div>
 

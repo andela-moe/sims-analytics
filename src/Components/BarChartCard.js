@@ -7,17 +7,16 @@ import {
 class BarChartCard extends PureComponent {
   render() {
     const { data } = this.props;
-    console.log(data);
     return (
       <BarChart
         width={500}
-        height={300}
+        height={400}
         data={data}
         margin={{
           top: 5, right: 30, left: 20, bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
+        <CartesianGrid strokeDasharray="2 4" />
         <XAxis dataKey="title" />
         <YAxis />
         <Tooltip />
