@@ -24,6 +24,7 @@ class Overview extends Component {
     try {
       const getAnalytics = await fetch(`${baseUrl}${token}`);
       const analytics = await getAnalytics.json();
+
       this.setState({ 
         records: analytics.records,
         reportType: this.props.match.path.split('/')[1],
